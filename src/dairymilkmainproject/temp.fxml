@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="968.0" style="-fx-border-radius: 50pt;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dairymilkmainproject.StockController">
+   <top>
+      <HBox style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Milk Management" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="374.0" prefWidth="93.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="122.0" style="-fx-border-radius: 30;" text="Purchase">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="122.0" text="Sales">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="129.0" text="Staff">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="86.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="127.0" text="Stock">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="124.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" text="Transaction">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" text="Sell Milk" />
+            <Label layoutX="58.0" layoutY="65.0" text="Date" />
+            <Label layoutX="48.0" layoutY="128.0" text="Staff_id" />
+            <Label layoutX="58.0" layoutY="200.0" text="QTY" />
+            <DatePicker fx:id="date" layoutX="150.0" layoutY="59.0" prefHeight="31.0" prefWidth="70.0" />
+            <TextField fx:id="staff_id" layoutX="150.0" layoutY="122.0" />
+            <TextField fx:id="qty" layoutX="150.0" layoutY="199.0" />
+            <Label layoutX="472.0" layoutY="61.0" text="Dealer Name" />
+            <Label layoutX="472.0" layoutY="186.0" />
+            <Label layoutX="476.0" layoutY="125.0" text="Milk Of" />
+            <Label layoutX="486.0" layoutY="193.0" text="Rate" />
+            <TextField fx:id="dealerName" layoutX="585.0" layoutY="61.0" />
+            <TextField fx:id="rate" layoutX="585.0" layoutY="193.0" />
+            <Label layoutX="487.0" layoutY="280.0" text="Total" />
+            <TextField fx:id="total" layoutX="585.0" layoutY="274.0" />
+            <Button layoutX="77.0" layoutY="354.0" mnemonicParsing="false" onAction="#sell_milk" text="Sell" />
+            <ComboBox fx:id="milkOf" layoutX="585.0" layoutY="119.0" onAction="#setRate" prefWidth="150.0" promptText="Cow" />
+            <Button fx:id="deleteRecord" layoutX="185.0" layoutY="354.0" mnemonicParsing="false" onAction="#delete_record" text="Delete Record" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <TableView fx:id="sell_table" prefHeight="156.0" prefWidth="968.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="53.0" text="id" />
+          <TableColumn fx:id="table_date" prefWidth="123.0" text="date" />
+          
+          <TableColumn fx:id="table_staffid" prefWidth="104.0" text="staffid" />
+          <TableColumn fx:id="table_dealerName" prefWidth="184.0" text="dealer name" />
+          
+          <TableColumn fx:id="table_milktype" prefWidth="125.0" text="milktype" />
+          <TableColumn fx:id="table_qty" prefWidth="90.0" text="qty" />
+          
+          <TableColumn fx:id="table_rate" prefWidth="111.0" text="rate" />
+          <TableColumn fx:id="table_total" prefWidth="177.0" text="total" />
+          
+        </columns>
+      </TableView>
+   </bottom>
+</BorderPane>

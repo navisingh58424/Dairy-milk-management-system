@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="968.0" style="-fx-border-radius: 50pt; -fx-background-color: #AADAF1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dairymilkmainproject.FXMLDocumentControllerPurchase">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Milk Management">
+                 <font>
+                        <Font name="Segoe UI Black Italic" size="24.0" />
+                 </font>
+                 </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="374.0" prefWidth="93.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goToPurchase" prefHeight="38.0" prefWidth="122.0" style="-fx-border-radius: 30;" text="Purchase">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="38.0" prefWidth="122.0" text="Sales">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="129.0" text="Staff">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="38.0" prefWidth="127.0" text="Stock">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="124.0" mnemonicParsing="false" onAction="#goToTransaction" prefHeight="38.0" prefWidth="135.0" text="Transaction">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane id="date" style="-fx-background-color: #1C2033;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" text="Add Staff Member" textFill="#f2eded" />
+            <Label layoutX="58.0" layoutY="65.0" text="Date" textFill="#eeeded" />
+            <Label layoutX="63.0" layoutY="128.0" text="SID" textFill="#fcf8f8" />
+            <Label layoutX="54.0" layoutY="199.0" text="Name" textFill="#f8f1f1" />
+            <Label layoutX="48.0" layoutY="260.0" text="Contact" textFill="#fffafa" />
+            <TextField fx:id="id" layoutX="150.0" layoutY="122.0" />
+            <TextField fx:id="name" layoutX="150.0" layoutY="186.0" />
+            <TextField fx:id="contact" layoutX="150.0" layoutY="254.0" />
+            <Label layoutX="526.0" layoutY="71.0" text="Gender" textFill="#fffdfd" />
+            <Label layoutX="472.0" layoutY="192.0" />
+            <Label layoutX="523.0" layoutY="160.0" text="Address" textFill="#fffbfb" />
+            <Button fx:id="staffadd" layoutX="68.0" layoutY="378.0" mnemonicParsing="false" onAction="#addStaff" text="Add" />
+            <Button fx:id="staffdelete" layoutX="192.0" layoutY="378.0" mnemonicParsing="false" onAction="#deleteStaff" text="Delete" />
+            <Button fx:id="staffupdate" layoutX="333.0" layoutY="378.0" mnemonicParsing="false" onAction="#editStaff" text="Update" />
+            <TextField fx:id="address" layoutX="631.0" layoutY="154.0" />
+            <ComboBox fx:id="gender" layoutX="631.0" layoutY="65.0" prefWidth="150.0" promptText="Male" />
+            <DatePicker fx:id="datepicker" layoutX="151.0" layoutY="59.0" prefHeight="38.0" prefWidth="127.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <TableView fx:id="staff_table" prefHeight="136.0" prefWidth="968.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="table_date" prefWidth="154.0" text="date" />
+          <TableColumn fx:id="table_name" prefWidth="142.0" text="name" />
+          <TableColumn fx:id="table_gender" prefWidth="111.0" text="gender" />
+          <TableColumn fx:id="table_contact" prefWidth="177.0" text="contact" />
+          <TableColumn fx:id="table_address" prefWidth="308.0" text="address" />
+          
+        </columns>
+      </TableView>
+   </bottom>
+</BorderPane>

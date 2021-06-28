@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="968.0" style="-fx-border-radius: 50pt;-fx-background-color: #AADAF1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dairymilkmainproject.Start_pageController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Milk Management">
+                 <font>
+                        <Font name="Segoe UI Black Italic" size="24.0" />
+                 </font>
+                 </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="374.0" prefWidth="93.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goToPurchase" prefHeight="38.0" prefWidth="122.0" style="-fx-border-radius: 30;" text="Purchase">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="38.0" prefWidth="122.0" text="Sales">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#goToStaff" prefHeight="38.0" prefWidth="129.0" text="Staff">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="38.0" prefWidth="127.0" text="Stock">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="124.0" mnemonicParsing="false" onAction="#goToTransaction" prefHeight="38.0" prefWidth="135.0" text="Transaction">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="btn" layoutX="2.0" prefHeight="583.0" prefWidth="870.0" styleClass="bodybg" stylesheets="@background.css">
+               <children>
+                  <Label layoutX="172.0" layoutY="73.0" text="Welcome to the Dairy Milkmanagement">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="153.0" prefHeight="26.0" prefWidth="111.0" text="Created By :">
+                  <font>
+                        <Font name="Segoe UI Black Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="203.0" text="Ayan Pingle : IIT2019042">
+                      <font>
+                        <Font name="Segoe UI Black Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="247.0" text="Shreesh Swaraj : IIT2019044">
+                      <font>
+                        <Font name="Segoe UI Black Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="383.0" layoutY="203.0" text="Ritesh Raj : IIT2019025">
+                      <font>
+                        <Font name="Segoe UI Black Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="383.0" layoutY="247.0" text="Navneet Singh : IIT2019056">
+                      <font>
+                        <Font name="Segoe UI Black Italic" size="17.0" />
+                     </font>
+                      </Label>
+                  <TextField fx:id="txt" layoutX="47.0" layoutY="317.0" prefHeight="38.0" prefWidth="235.0" promptText="Enter your mysql password" />
+                  <Button  layoutX="398.0" layoutY="317.0" mnemonicParsing="false" text="Submit" onAction="#updatePassword"/>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

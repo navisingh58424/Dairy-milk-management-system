@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="968.0" style="-fx-border-radius: 50pt; -fx-background-color: #AADAF1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dairymilkmainproject.TransactionController">
+   <top>
+      <HBox  BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Milk Management">
+                 <font>
+                        <Font name="Segoe UI Black Italic" size="24.0" />
+                 </font>
+                 </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="374.0" prefWidth="93.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goToPurchase" prefHeight="38.0" prefWidth="122.0" style="-fx-border-radius: 30;" text="Purchase">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="38.0" prefWidth="122.0" text="Sales">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#goToStaff" prefHeight="38.0" prefWidth="129.0" text="Staff">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#goToStock" prefHeight="38.0" prefWidth="127.0" text="Stock">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="124.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" text="Transaction">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane style="-fx-background-color: #1C2033;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" text="Search Transaction" textFill="#f2f0f0" />
+            <Label layoutX="58.0" layoutY="65.0" text="Date" textFill="#f2efef" />
+            <DatePicker fx:id="date" layoutX="150.0" layoutY="59.0" prefHeight="38.0" prefWidth="128.0" />
+            <Label layoutX="472.0" layoutY="186.0" />
+            <Button layoutX="405.0" layoutY="59.0" mnemonicParsing="false" onAction="#searchValue" text="Search" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <TableView fx:id="transaction_table" prefHeight="311.0" prefWidth="968.0" style=" -fx-background-color: #AADAF1;" BorderPane.alignment="CENTER">
+        <columns>
+            
+          <TableColumn fx:id="table_id" prefWidth="53.0" text="id" />
+          <TableColumn fx:id="table_date" prefWidth="123.0" text="date" />
+          
+          <TableColumn fx:id="table_ename" prefWidth="104.0" text="ename" />
+          <TableColumn fx:id="table_amount" prefWidth="184.0" text="amount" />
+          
+          <TableColumn fx:id="table_type" prefWidth="125.0" text="type" />
+          <TableColumn fx:id="table_description" prefWidth="217.0" text="description" />
+          <TableColumn fx:id="table_purchase_sale_id" prefWidth="161.0" text="purchase_sale_id" />
+          
+          
+        </columns>
+      </TableView>
+   </bottom>
+</BorderPane>
